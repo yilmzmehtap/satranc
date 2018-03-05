@@ -13,13 +13,13 @@ import java.awt.event.WindowListener;
  *
  * @author MEHTAP
  */
-public class RegisterForm extends javax.swing.JFrame implements WindowListener {
+public class KayitEkrani extends javax.swing.JFrame implements WindowListener {
 
     /**
      * Creates new form RegisterForm
      */
-    LoginForm loginForm;
-    public RegisterForm(LoginForm loginForm) {
+    GirisEkrani loginForm;
+    public KayitEkrani(GirisEkrani loginForm) {
         initComponents();
         this.loginForm = loginForm;
         addWindowListener(this);

@@ -9,13 +9,13 @@ package com.satranc;
  *
  * @author skardas
  */
-public class ChessFrame extends javax.swing.JFrame {
+public class SatrancEkrani extends javax.swing.JFrame {
 
  
     /**
      * Creates new form ChessFrame
      */
-    public ChessFrame() {
+    public SatrancEkrani() {
         initComponents();
         setBounds(100, 100, 800, 800);
         setAlwaysOnTop(true);
@@ -88,20 +88,21 @@ public class ChessFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ChessFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SatrancEkrani.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ChessFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SatrancEkrani.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ChessFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SatrancEkrani.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ChessFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SatrancEkrani.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ChessFrame().setVisible(true);
+                new SatrancEkrani().setVisible(true);
             }
         });
     }
