@@ -8,6 +8,7 @@ package com.satranc.tahta;
 import com.satranc.taslar.Tas;
 import com.satranc.taslar.Piyon;
 import com.satranc.taslar.At;
+import com.satranc.taslar.Fil;
 import static com.satranc.taslar.Tas.SELECTED_COLOR;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -76,5 +77,17 @@ public class TasPanel extends JPanel {
     }
        public boolean hasAnyTas(At aThis) {
        return getTas() != null;
+       }
+       
+       public boolean hasAnyTas(Fil aThis) {
+       return getTas() != null;
     }
-}
+
+    
+
+       
+    }
+
+    
+
+
