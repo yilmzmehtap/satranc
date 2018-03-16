@@ -17,6 +17,8 @@ public class Piyon extends Tas {
     public Piyon(boolean isWhite, int width, int height) {
         super(isWhite);
 
+        super.width = width;
+        super.height = height;
         setIcon(new ImageIcon(
                 new ImageIcon("icons/" + (isWhite ? "WhitePawn.png" : "BlackPawn.png"))
                         .getImage().getScaledInstance(width, height, Image.SCALE_DEFAULT)));
@@ -27,6 +29,7 @@ public class Piyon extends Tas {
     @Override
     public boolean move(TasPanel[][] cells, TasPanel hedef) 
     {
+        boolean sonuc = false;
         Tas tas = hedef.getTas();      
         if(tas == null)
         {
@@ -36,12 +39,12 @@ public class Piyon extends Tas {
                 this.getParent().remove(this);
                 hedef.add(this);
                 isMoved = true;
-                return true;
+                sonuc = true;
             }
         }
         else if(tas == this || isWhite == tas.isWhite)
         {
-            return false;
+              sonuc = false;
         }
         else if(isWhite != tas.isWhite)
         {
@@ -54,10 +57,21 @@ public class Piyon extends Tas {
                 hedef.remove(0);
                 hedef.add(this);
                 isMoved = true;
-                return true;
+                 sonuc = true;
             }
         }
-        return false;
+        
+        Point index = getIndex(cells);
+        if((index.y == 0 && !isWhite)|| index.y == 7 && isWhite)//tas siyah ama karşı tarafa varmış
+        {
+            Vezir vezir = new Vezir(isWhite, width, height);
+            vezir.isSelected = isSelected;
+            Container cont = getParent();
+            cont.remove(this);
+            cont.add(vezir);
+
+        }
+        return sonuc;
     }
 
     private void setSelectedVertical(TasPanel[][] cells, int x, int y, boolean isSelected) 

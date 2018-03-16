@@ -23,6 +23,7 @@ public class Tas extends JLabel
     boolean isSelected = false;
     public static final Color SELECTED_COLOR = new Color(34, 139, 34, 120);
     public static final Color DISABLED_COLOR = new Color(255, 139, 34, 20);
+    protected int width, height;
 
     public Tas(boolean isWhite) {
         this.isWhite = isWhite; 
