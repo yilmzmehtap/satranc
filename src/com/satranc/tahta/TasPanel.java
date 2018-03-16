@@ -10,6 +10,7 @@ import com.satranc.taslar.Piyon;
 import com.satranc.taslar.At;
 import com.satranc.taslar.Kale;
 import com.satranc.taslar.Fil;
+import com.satranc.taslar.Vezir;
 import static com.satranc.taslar.Tas.SELECTED_COLOR;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -88,6 +89,9 @@ public class TasPanel extends JPanel {
        return getTas() != null;
     }
 
+     public boolean hasAnyTas(Vezir aThis) {
+      return getTas() != null;
+    }
 }
     
 
