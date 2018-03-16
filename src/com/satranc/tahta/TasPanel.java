@@ -11,6 +11,8 @@ import com.satranc.taslar.At;
 import com.satranc.taslar.Kale;
 import com.satranc.taslar.Fil;
 import com.satranc.taslar.Vezir;
+import com.satranc.taslar.Kral;
+
 import static com.satranc.taslar.Tas.SELECTED_COLOR;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -35,7 +37,6 @@ public class TasPanel extends JPanel {
         return canMove;
     }
     
-    
     public void setCanMove(boolean canMove)
     {
         this.canMove = canMove;
@@ -52,7 +53,6 @@ public class TasPanel extends JPanel {
             g.fillRect(1, 1, getWidth()-2, getHeight()-2);
         }
     }
-
     public Tas getTas() {
         return  getComponentCount() < 1 ? null : (Tas) getComponent(0);
     }
@@ -88,8 +88,11 @@ public class TasPanel extends JPanel {
          public boolean hasAnyTas(Kale aThis) {
        return getTas() != null;
     }
-
+         
      public boolean hasAnyTas(Vezir aThis) {
+      return getTas() != null;
+    }
+        public boolean hasAnyTas(Kral aThis) {
       return getTas() != null;
     }
 }
