@@ -43,7 +43,7 @@ public class SatrancEkrani extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(100, 100, 800, 800));
         getContentPane().setLayout(null);
         getContentPane().add(chessBoard);
-        chessBoard.setBounds(80, 80, 640, 640);
+        chessBoard.setBounds(30, 70, 570, 600);
 
         jMenu1.setText("Dosya");
 
