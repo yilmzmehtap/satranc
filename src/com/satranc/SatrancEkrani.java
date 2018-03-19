@@ -32,7 +32,16 @@ public class SatrancEkrani extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSpinner1 = new javax.swing.JSpinner();
         chessBoard = new com.satranc.tahta.ChessBoard();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jPanel4 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -43,9 +52,43 @@ public class SatrancEkrani extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(100, 100, 800, 800));
         getContentPane().setLayout(null);
         getContentPane().add(chessBoard);
-        chessBoard.setBounds(30, 70, 570, 600);
+        chessBoard.setBounds(10, 40, 560, 590);
 
-        jMenu1.setText("Dosya");
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel3.setLayout(null);
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jPanel3.add(jPanel1);
+        jPanel1.setBounds(20, 240, 170, 180);
+
+        jButton1.setText("Gönder");
+        jPanel3.add(jButton1);
+        jButton1.setBounds(190, 420, 80, 50);
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane3.setViewportView(jTextArea2);
+
+        jPanel3.add(jScrollPane3);
+        jScrollPane3.setBounds(20, 420, 170, 50);
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Kisiler", "KisiEkle", "KisiDavet", "KisiSil" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        jPanel3.add(jScrollPane1);
+        jScrollPane1.setBounds(190, 240, 80, 180);
+        jPanel3.add(jPanel4);
+        jPanel4.setBounds(20, 20, 240, 180);
+
+        getContentPane().add(jPanel3);
+        jPanel3.setBounds(620, 50, 290, 580);
+
+        jMenu1.setText("  Oyun  ");
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem1.setText("Yeni Oyun");
@@ -109,9 +152,18 @@ public class SatrancEkrani extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.satranc.tahta.ChessBoard chessBoard;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
 }
