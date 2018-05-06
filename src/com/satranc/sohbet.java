@@ -5,22 +5,15 @@
  */
 package com.satranc;
 
-import javax.swing.JFrame;
 /**
  *
  * @author MEHTAP
  */
-public class sohbetEkrani extends javax.swing.JDialog {
+public class sohbet extends javax.swing.JFrame {
 
-    /**
-     * Creates new form sohbetEkrani
-     */
-    public sohbetEkrani() {
-        
+   
+    public sohbet() {
         initComponents();
-        this.setLocationRelativeTo(null);
-        
-        
     }
 
     /**
@@ -33,49 +26,19 @@ public class sohbetEkrani extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        jButton3 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setLayout(null);
 
-        jPanel4.setBackground(new java.awt.Color(25, 25, 25));
-        jPanel4.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPanel1.add(jPanel4);
-        jPanel4.setBounds(40, 10, 360, 160);
-
-        jPanel2.setBackground(new java.awt.Color(19, 31, 29));
-        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(70, 190, 240, 160);
-
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
-
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton3.setText("  Kisiler");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton3);
-
-        jButton7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton7.setText("KisiSil");
-        jPanel3.add(jButton7);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton5.setText("KisiEkle");
@@ -95,19 +58,21 @@ public class sohbetEkrani extends javax.swing.JDialog {
         });
         jPanel3.add(jButton6);
 
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton3.setText("  Kisiler");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton3);
+
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton7.setText("KisiSil");
+        jPanel3.add(jButton7);
+
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(310, 190, 80, 160);
-
-        jButton1.setText("Gönder");
-        jPanel1.add(jButton1);
-        jButton1.setBounds(310, 350, 80, 50);
-
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane3.setViewportView(jTextArea2);
-
-        jPanel1.add(jScrollPane3);
-        jScrollPane3.setBounds(70, 350, 240, 50);
+        jPanel3.setBounds(160, 120, 390, 160);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -120,17 +85,15 @@ public class sohbetEkrani extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 663, Short.MAX_VALUE)
+            .addGap(0, 651, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 651, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 12, Short.MAX_VALUE)))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 651, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 484, Short.MAX_VALUE)
+            .addGap(0, 462, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE))
         );
 
         pack();
@@ -139,16 +102,16 @@ public class sohbetEkrani extends javax.swing.JDialog {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         System.exit(DISPOSE_ON_CLOSE);
         // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,36 +130,31 @@ public class sohbetEkrani extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(sohbetEkrani.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(sohbet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(sohbetEkrani.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(sohbet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(sohbetEkrani.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(sohbet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(sohbetEkrani.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(sohbet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new sohbetEkrani().setVisible(true);
+                new sohbet().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
 }

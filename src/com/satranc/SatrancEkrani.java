@@ -38,10 +38,11 @@ public class SatrancEkrani extends javax.swing.JFrame {
         chessBoard = new com.satranc.tahta.ChessBoard();
         jPanel3 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jEditorPane1 = new javax.swing.JEditorPane();
         jButton1 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
-        jPanel4 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -66,8 +67,22 @@ public class SatrancEkrani extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        jScrollPane2.setViewportView(jEditorPane1);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
+        );
+
         jPanel3.add(jPanel1);
-        jPanel1.setBounds(20, 280, 250, 140);
+        jPanel1.setBounds(20, 10, 250, 410);
 
         jButton1.setText("Gönder");
         jPanel3.add(jButton1);
@@ -79,8 +94,6 @@ public class SatrancEkrani extends javax.swing.JFrame {
 
         jPanel3.add(jScrollPane3);
         jScrollPane3.setBounds(20, 420, 170, 50);
-        jPanel3.add(jPanel4);
-        jPanel4.setBounds(20, 20, 240, 180);
 
         getContentPane().add(jPanel3);
         jPanel3.setBounds(620, 50, 290, 580);
@@ -150,6 +163,7 @@ public class SatrancEkrani extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.satranc.tahta.ChessBoard chessBoard;
     private javax.swing.JButton jButton1;
+    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -157,8 +171,8 @@ public class SatrancEkrani extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextArea jTextArea2;
