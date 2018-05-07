@@ -62,7 +62,7 @@ public class PortEkrani extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Giriş");
+        jLabel4.setText(" PORT");
 
         jLabelclose.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelclose.setForeground(new java.awt.Color(255, 255, 255));
@@ -180,6 +180,9 @@ public class PortEkrani extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+         sohbet sh = new sohbet();
+       sh.setVisible(true);
+       this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

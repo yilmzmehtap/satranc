@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.komut;
+
 import com.kullanıcı.KullaniciKomutYorumla;
 import java.io.Serializable;
 import java.util.Date;

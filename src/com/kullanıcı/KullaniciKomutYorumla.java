@@ -15,7 +15,7 @@ import com.komut.KisiListemiGetir;
 import com.komut.KomutYorumla;
 import com.komut.Mesaj;
 import com.komut.OturumAcma;
-;
+
 /**
  *
  * @author MEHTAP
@@ -23,11 +23,12 @@ import com.komut.OturumAcma;
 public class KullaniciKomutYorumla {
 
     public static String SeriNo=null;
-    kullaniciKontrol yonetici;
+    KullaniciKontrol yonetici;
 
-    public KullaniciKomutYorumla(kullaniciKontrol yonetici) {
+    public KullaniciKomutYorumla(KullaniciKontrol yonetici) {
         this.yonetici = yonetici;
     }
-    
+
+  
     
 }

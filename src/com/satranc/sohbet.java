@@ -5,6 +5,16 @@
  */
 package com.satranc;
 
+import com.komut.ArkadasEkleme;
+import com.komut.Mesaj;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import com.komut.KullaniciKayitEkle;
+import com.komut.KisiListemiGetir;
+import com.kullanıcı.KullaniciKontrol;
+import java.io.IOException;
+
+
 /**
  *
  * @author MEHTAP
@@ -14,6 +24,11 @@ public class sohbet extends javax.swing.JFrame {
    
     public sohbet() {
         initComponents();
+     
+
+        jPanel3.setVisible(false);
+
+        
     }
 
     /**
@@ -72,7 +87,7 @@ public class sohbet extends javax.swing.JFrame {
         jPanel3.add(jButton7);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(160, 120, 390, 160);
+        jPanel3.setBounds(30, 40, 390, 160);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,18 +113,38 @@ public class sohbet extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+      KullaniciKontrol kullaniciYonetici;
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        System.exit(DISPOSE_ON_CLOSE);
-        // TODO add your handling code here:
 
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+// TODO add your handling code here:
+      JTextField field1 = new JTextField();
+        Object[] message = {
+            "Kullanici Adi:", field1,
+             };
+        int option = JOptionPane.showConfirmDialog(this, message, "Eklemek İstediğiniz Arkadaşın Kullanici Adını Giriniz", JOptionPane.OK_CANCEL_OPTION);
+        if (option == JOptionPane.OK_OPTION) {
+            String arkadasKullaniciAdi = field1.getText();
+            try 
+            {
+                kullaniciYonetici.komutuGonder(new ArkadasEkleme(kullaniciYonetici.kullaniciAdi,arkadasKullaniciAdi, true));
+            } catch (Exception e) {
+                jEditorPane1.setText(jEditorPane1.getText() + "\n" + e.getMessage());
+            }
+        }
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+
+
+
+
+
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -157,4 +192,30 @@ public class sohbet extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
+
+    private static class kullaniciYonetici {
+
+        private static String kullaniciAdi;
+
+        private static void komutuGonder(ArkadasEkleme arkadasEkleme) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public kullaniciYonetici() {
+        }
+    }
+
+    private static class jEditorPane1 {
+
+        private static String getText() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private static void setText(String string) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public jEditorPane1() {
+        }
+    }
 }

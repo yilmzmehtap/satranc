@@ -4,15 +4,16 @@
  * and open the template in the editor.
  */
 package com.komut;
-import java.util.AbstractList;
+
 import java.util.ArrayList;
 
 /**
  *
- * @author MEHTAP
+ * @author Lab
  */
 public class KisiListemiGetir extends Komut{
-     public ArrayList<String> kisilerim = new ArrayList<>();
+
+    public ArrayList<String> kisilerim = new ArrayList<>();
     public KisiListemiGetir(String kimden, String kime) {
         super(kimden, kime);
     }
@@ -22,5 +23,7 @@ public class KisiListemiGetir extends Komut{
         kmt.kisiListemiGetirYonet(this);
     }
     
-    
 }
+
+    
+

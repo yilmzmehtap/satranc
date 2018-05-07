@@ -275,6 +275,9 @@ public class KayitEkrani extends javax.swing.JFrame implements WindowListener {
 
     private void jButtonRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegisterActionPerformed
         // TODO add your handling code here:
+          GirisEkrani ge = new GirisEkrani();
+       ge.setVisible(true);
+       this.setVisible(false);
     }//GEN-LAST:event_jButtonRegisterActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed

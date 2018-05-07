@@ -17,7 +17,8 @@ public class SatrancEkrani extends javax.swing.JFrame {
      */
     public SatrancEkrani() {
         initComponents();
-        setBounds(100, 100, 800, 800);
+        setBounds(20, 20, 1000, 1000);
+        
         setAlwaysOnTop(true);
         
 
@@ -37,12 +38,10 @@ public class SatrancEkrani extends javax.swing.JFrame {
         jList1 = new javax.swing.JList<>();
         chessBoard = new com.satranc.tahta.ChessBoard();
         jPanel3 = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jEditorPane1 = new javax.swing.JEditorPane();
         jButton1 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        jEditorPane2 = new javax.swing.JEditorPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -58,45 +57,29 @@ public class SatrancEkrani extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Santraç Oyunu");
         setBounds(new java.awt.Rectangle(100, 100, 800, 800));
+        setResizable(false);
         getContentPane().setLayout(null);
         getContentPane().add(chessBoard);
         chessBoard.setBounds(10, 40, 560, 590);
 
-        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setLayout(null);
-
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-
-        jScrollPane2.setViewportView(jEditorPane1);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
-        );
-
-        jPanel3.add(jPanel1);
-        jPanel1.setBounds(20, 10, 250, 410);
 
         jButton1.setText("Gönder");
         jPanel3.add(jButton1);
-        jButton1.setBounds(190, 420, 80, 50);
+        jButton1.setBounds(290, 420, 80, 50);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane3.setViewportView(jTextArea2);
+        jTextField1.setText("Merhaba");
+        jPanel3.add(jTextField1);
+        jTextField1.setBounds(20, 420, 270, 50);
+
+        jScrollPane3.setViewportView(jEditorPane2);
 
         jPanel3.add(jScrollPane3);
-        jScrollPane3.setBounds(20, 420, 170, 50);
+        jScrollPane3.setBounds(20, 40, 350, 370);
 
         getContentPane().add(jPanel3);
-        jPanel3.setBounds(620, 50, 290, 580);
+        jPanel3.setBounds(620, 50, 410, 570);
 
         jMenu1.setText("  Oyun  ");
 
@@ -163,18 +146,16 @@ public class SatrancEkrani extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.satranc.tahta.ChessBoard chessBoard;
     private javax.swing.JButton jButton1;
-    private javax.swing.JEditorPane jEditorPane1;
+    private javax.swing.JEditorPane jEditorPane2;
     private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
